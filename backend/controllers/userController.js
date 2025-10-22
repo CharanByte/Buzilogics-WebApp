@@ -24,3 +24,6 @@ if (!results.length) return res.status(404).json({ error: 'User not found' });
 res.json(results[0]);
 });
 };
+
+
+

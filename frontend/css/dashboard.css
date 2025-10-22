@@ -107,6 +107,60 @@ h2, h3, h4 {
   color: #1e293b;
 }
 
+/* Profile Action Buttons */
+.profile-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.profile-actions button {
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-actions button:hover {
+  background: #0369a1;
+}
+
+#editProfileForm, #resetPasswordForm {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+#editProfileForm input, #resetPasswordForm input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+#editProfileForm button, #resetPasswordForm button {
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#editProfileForm button:hover, #resetPasswordForm button:hover {
+  background: #0369a1;
+}
+
+
 #btnViewUsers {
   padding: 10px 18px;
   background: #0ea5e9;
