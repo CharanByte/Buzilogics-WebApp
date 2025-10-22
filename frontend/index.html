@@ -1,15 +1,32 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Buzilogics — Home</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buzilogics — Home</title>
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div class="container">
-<h1>Welcome to Buzilogics</h1>
-<p><a href="login.html">Login</a> | <a href="register.html">Register</a></p>
-</div>
+  <header class="header">
+    <div class="logo">Buzilogics</div>
+    <nav class="nav">
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <main class="container">
+    <h1>Welcome to Buzilogics</h1>
+   
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.querySelector('.nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

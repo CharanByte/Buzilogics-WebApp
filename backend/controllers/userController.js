@@ -2,14 +2,16 @@ import db from '../models/db.js';
 
 
 export const getUsers = (req, res) => {
-const sql = 'SELECT id, name, email, role, created_at FROM users';
-db.query(sql, (err, results) => {
-if (err) {
-console.error('Get users error', err);
-return res.status(500).json({ error: 'Database error' });
-}
-res.json(results);
-});
+  const sql =  "SELECT id, name, email, role, created_at  FROM users WHERE role = 'user'";
+
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error('Get users error', err);
+      return res.status(500).json({ error: 'Database error' });
+    }
+
+    res.json(results);
+  });
 };
 
 
